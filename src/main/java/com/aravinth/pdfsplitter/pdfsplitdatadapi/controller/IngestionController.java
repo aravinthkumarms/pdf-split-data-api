@@ -58,17 +58,6 @@ public class IngestionController {
     }
 
 
-    @PostMapping("/write")
-        public IngestDataEntity upload(@RequestBody IngestDataEntity IDE){
-            IngestDataEntity ingestDataEntity = new IngestDataEntity();
-            ingestDataEntity.setFileID("dfsdf");
-            ingestDataEntity.setFileSize(60);
-            ingestDataEntity.setFilePath("gs://"+bucketName+"/");
-            ingestDataEntity.setFileName("sample");
-            ingestDataRepository.save(ingestDataEntity);
-            return  ingestDataEntity;
-    }
-
     @PostMapping("/POST/upload/doc/details")
     public ResponseEntity<IngestDataEntity> saveData( @RequestBody IngestDataEntity ingestDataEntity){
         log.info("Calling Dataservice.saveUpdData for saving the upload data");
