@@ -136,6 +136,7 @@
 		</dependencies>
 	</dependencyManagement>
 
+
 	<build>
 		<plugins>
 			<plugin>
@@ -162,17 +163,19 @@
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
 				</configuration>
 			</plugin>
+
 		</plugins>
 		<resources>
-		<resource>
-			<directory>src/main/resources</directory>
-			<filtering>true</filtering>
-			<includes>
-				<include>**/*.properties</include>
-				<include>**/*.yml</include>
-			</includes>
-		</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.json</include>
+				</includes>
+			</resource>
 		</resources>
+
+
 	</build>
 
 </project>
